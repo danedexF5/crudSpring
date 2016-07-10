@@ -1,0 +1,26 @@
+<html>
+<body>
+
+
+{{#username}}
+    <form action="editDrinks" method="post">
+    {{#drink}}
+        <input type="text" placeholder="Drink Name" name="name" value="{{name}}" required/>
+        <input type="hidden" placeholder="Drink id" name="id" value="{{id}}" required/>
+        <select name="type" required>
+            <option value="{{typeDrink}}"selected>{{typeDrink}}</option>
+            <option value="Strong">Strong</option>
+            <option value="Medium">Medium</option>
+            <option value="Weak">Weak</option>
+
+            <option value="Other">Everything Else</option>
+        </select>
+
+        <input type="number" placeholder="calories" name="calories" value={{calories}} required>
+        <button type="submit">submit</button>
+    {{/drink}}
+    </form>
+{{/username}}
+
+</body>
+</html>

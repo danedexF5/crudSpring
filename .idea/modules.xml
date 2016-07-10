@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CrudSpring.iml" filepath="$PROJECT_DIR$/.idea/modules/CrudSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CrudSpring_main.iml" filepath="$PROJECT_DIR$/.idea/modules/CrudSpring_main.iml" group="CrudSpring" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CrudSpring_test.iml" filepath="$PROJECT_DIR$/.idea/modules/CrudSpring_test.iml" group="CrudSpring" />
+    </modules>
+  </component>
+</project>

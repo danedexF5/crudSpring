@@ -1,0 +1,63 @@
+<html>
+<body>
+
+<title>Catalog Your Drinks!</title>
+
+{{^username}}
+
+<form action="login" method="post">
+<input type = "text" placeholder="Enter Name" name="u"/>
+<input type="password" placeholder="Password" name = "password"/>
+<button type="submit">Login</button>
+</form>
+
+{{/username}}
+
+{{#username}}
+    {{username}}<br>
+<a href = "logout">Logout</a>
+{{/username}}
+
+<br>
+<a href="/">All</a>
+<a href="/?type=Strong">Strong</a>
+
+<a href="/?type=Medium">Medium</a>
+
+<a href="/?type=Weak">Weak</a>
+
+<a href="/?type=Other">Everything Else</a>
+<a href="/?showMine=true">These are my drinks!</a>
+
+<br>
+
+<form action="/" method="get">
+    <input type="text" placeholder="search" name="search" required>
+    <button type="submit">Search</button>
+</form>
+
+<br>
+
+{{#username}}
+<form action="addDrink" method="post">
+    <input type="text" placeholder="Drink Name" name="drinkName" required/>
+    <select name="anotherDrinkType" required>
+        <option value="Strong">Strong</option>
+        <option value="Medium">Medium</option>
+        <option value="Weak">Weak</option>
+
+        <option value="Other">Everything Else</option>
+    </select>
+
+    <input type="number" placeholder="calories" name="drinkCalories" required>
+    <button type="submit">submit</button>
+</form>
+{{/username}}
+
+{{#drinks}}
+    {{name}} -  {{typeDrink}} - {{calories}} by {{#user}} {{name}} {{/user}} {{#editable}} <a href="/deleteDrinks?id={{id}}">Delete</a>  | <a href="/editDrinks?id={{id}}">Edit</a> {{/editable}}
+    <br>
+{{/drinks}}
+
+</body>
+</html>
